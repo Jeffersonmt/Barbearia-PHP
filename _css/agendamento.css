@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    background:#282828 url(../_imagens/bg01.png) repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+		font-size: 10pt;
+		font-weight: 400;
+  }
+
+.btn2{
+  margin: 160;
+  margin-left: 640px;
+  border-radius: 12px;
+  width: 15%;
+  height: 3%;
+  font-size: 13pt;
+  font-weight: bold;
+}
+  .line {
+    text-align: center;
+    font-size: 3em;
+    margin: 150 auto;
+    font-family: 'Special Elite', monospace;
+    color: rgba(255, 255, 255, .75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .line2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: -145 auto;
+    font-family: 'Special Elite', monospace;
+    color: rgba(255, 255, 255, .75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .typing-animation{
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 3s steps(40) 1s normal both;
+  }
+
+  .typing{
+    animation: blinkCursor 500ms steps(40) infinite normal, typing2 3s steps(40) 3s normal both;
+  }
+
+  @keyframes typing2{
+    from{
+  width: 0;
+    }
+    to{
+  width: 17em;
+    }
+  }
+
+
+    @keyframes typing{
+      from{
+        width: 0;
+      }
+      to{
+        width: 17em;
+        border-right: transparent;
+      }
+    }
+
+  @keyframes blinkCursor {
+    from{
+      border-right-color: rgba(255, 255, 255, .75);
+    }
+    to{
+      border-right-color: transparent;
+    }
+  }
+
+  #logo
+	{
+		padding: 3em 0em;
+		text-transform: uppercase;
+	}
+	
+	#logo h1 a
+	{
+		text-decoration: none;
+		font-size: 1.5em;
+		color: #FFF;
+	}
+	
+	#logo span
+	{
+		color: red;
+	}
+
+  .container
+	{
+		margin: 0px auto;
+		width: 1200px;
+	}
+
+  #menu
+	{
+		background: #1B1B1B url(images/bg01.png) repeat;
+		border-bottom: 4px solid #BC1414;
+    border-radius: 10px;
+	}
+	
+	#menu button
+	{
+		margin: 5;
+		margin-left: 94%;
+	}
+	
+  form {
+    border: 3px solid red;
+    width: 40%;
+    margin: 50px auto;
+    padding: 15px;
+  }
+
+  form p {
+    font-size: 12pt;
+    color: rgba(255, 255, 255, .75);
+    font-family: 'Dela Gothic One';
+  }
+  form h6{
+    font-size: 14pt;
+    font-family: 'Dela Gothic One';
+    color: rgba(255, 255, 255);
+    margin: 10;
+  }
+
+  .btn-secondary{
+    margin: 3px;
+  }
+  .input-block input {
+    text-align: center;
+    margin-left: 25%;
+    width: 50%;
+    background-color: rgba(255,255,255, 0.6);
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 9px;
+  }
+  ::-webkit-input-placeholder {
+    color: white;
+
+ }
+#datetime {
+  text-align: center;
+    margin-bottom: 10px;
+    width: 50%;
+    background-color: rgba(255,255,255, 0.6);
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 9px;
+}
+
+
+
+
+
+ 

@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    background:#282828 url(../_imagens/bg01.png) repeat;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+  }
+
+  .form-section{
+    margin-top: 100px;
+  }
+  
+  form .input-block {
+    margin-bottom: 20px;
+  }
+
+  
+  form .input-block input {
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 9px;
+  }
+  
+  form .btn-login {
+    display: block;
+    min-width: 120px;
+    width: 100%;
+    border: none;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 25px;
+    padding: 7px;
+  }
+  form .btn-cadastro {
+    display: block;
+    min-width: 120px;
+    width: 100%;
+    border: none;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 25px;
+    padding: 7px;
+    margin-top: 5px;;
+  }
+  
+
+/* APARIÇÃO DA IMG */
+
+  img {
+    animation: fade 400ms;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+  }
+
+
+  /* APARIÇÃO DO FORM */
+  form {
+    overflow: hidden;
+    animation: fade 0.2s;
+  }
+  
+  form .input-block:nth-child(1) {
+    animation: move 500ms;
+  }
+  
+  form .input-block:nth-child(2) {
+    animation: move 400ms;
+    animation-duration: 1s;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+  }
+  
+  form .btn-login {
+    animation: move 400ms;
+    animation-duration: 1s;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+  }
+  form .btn-cadastro{
+    animation: move 400ms;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes move {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  
+  /*  efeito de saida da tela */
+  .form-hide{
+    animation: down 1.2s forwards;
+    animation-timing-function: cubic-bezier(0.075,0.82.0.165,1);
+  }
+
+  @keyframes down{
+    from{
+      transform: translateY(0);
+    }
+    to{
+      transform: translateY(100vh);
+    }
+  }
+
+  
+/* form NO-NO */
+
+form.validate-error{
+  animation: nono 200ms linear, fade paused;
+  animation-iteration-count: 2;
+}
+
+@keyframes nono {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  35%{
+    transform: translateX(-15%);
+  }
+  70%{
+    transform: translateX(15%)
+  }
+}
+
+
+#menu
+	{
+		background: #1B1B1B url(images/bg01.png) repeat;
+		border-bottom: 4px solid #BC1414;
+    border-radius: 10px;
+    padding: 20px;
+	}
+	
+	#menu button
+	{
+		margin: 5;
+		margin-left: 94%;
+	}
