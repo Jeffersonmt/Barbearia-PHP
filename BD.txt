@@ -1,0 +1,54 @@
+create database barbearia;
+use barbearia;
+
+CREATE TABLE empresa (
+  id_empresa int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nome_adm varchar(50) DEFAULT NULL,
+  senha varchar(8) DEFAULT NULL,
+  email varchar(50) DEFAULT NULL,
+  cpf varchar(50) DEFAULT NULL,
+  telefone varchar(14) DEFAULT NULL,
+  aniversario date DEFAULT NULL,
+  datainicio date DEFAULT NULL,
+  id_barbeiro int(11) DEFAULT NULL,
+  KEY fk_Barbeiros (id_barbeiro),
+  CONSTRAINT fk_Barbeiros FOREIGN KEY (id_barbeiro) REFERENCES barbeiro (id_barbeiro)
+);
+
+Insert into empresa(nome_adm, senha) values ('', );
+
+CREATE TABLE cortes (
+  id_corte int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nomeCliente varchar(50) DEFAULT NULL,
+  datacorte date DEFAULT NULL,
+  barbeiro varchar(50) DEFAULT NULL,
+  telefone varchar(15) DEFAULT NULL,
+  valorCorte double(7,2) NOT NULL
+);
+
+Alter table cortes add column produto varchar(50);
+Alter table cortes add column valorProduto double(7,2);
+Alter table cortes add column comprador varchar(50);
+
+CREATE TABLE barbeiro (
+  id_barbeiro int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nome varchar(50) DEFAULT NULL,
+  senha varchar(8) DEFAULT NULL,
+  email varchar(50) DEFAULT NULL,
+  cpf varchar(50) DEFAULT NULL,
+  telefone varchar(15) DEFAULT NULL,
+  aniversario date DEFAULT NULL,
+  datainicio date DEFAULT NULL,
+  idCortes int,
+  CONSTRAINT fk_cortesBarbeiro FOREIGN KEY (idCortes) REFERENCES cortes (id_corte)
+);
+
+CREATE TABLE agenda (
+  id_agenda int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nome_cliente varchar(50) DEFAULT NULL,
+  telefone varchar(15) DEFAULT NULL,
+  barbeiro varchar(50) DEFAULT NULL,
+  datacorte date DEFAULT NULL,
+  valorCorte double(7,2) DEFAULT NULL,
+  hora time DEFAULT NULL
+);
